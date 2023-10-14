@@ -10,7 +10,7 @@ const options = {
       version: "1.0.0",
       description: "북극곰",
     },
-    host: "localhost:3000",
+    host: "localhost:8080",
     basePath: "/",
   },
   apis: ["src/routers/*", "./api/*", "src/model/*"],
