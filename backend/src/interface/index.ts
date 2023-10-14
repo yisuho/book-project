@@ -63,6 +63,7 @@ interface IUserModel {
 interface IPostModel {
   create(postInfo: post): Promise<post>;
   findPost(postId: number): Promise<post>;
+
   findAllDesc(page: number): Promise<post[]>;
   findAllAsc(page: number): Promise<post[]>;
   searchPost(search: string, page: number): Promise<post[]>;
