@@ -1,0 +1,7 @@
+2023/10/14 06:53:41 [alert] 196#196: *688 512 worker_connections are not enough while connecting to upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "localhost", referrer: "http://localhost/"
+2023/10/14 06:54:07 [warn] 146#146: server name "http://localhost:3000" has suspicious symbols in /data/nginx/proxy_host/1.conf:15
+2023/10/14 07:01:12 [warn] 146#146: server name "http://localhost:3000" has suspicious symbols in /data/nginx/proxy_host/1.conf:15
+2023/10/14 07:02:24 [warn] 146#146: server name "http://localhost:3000" has suspicious symbols in /data/nginx/proxy_host/1.conf:15
+2023/10/14 07:05:03 [warn] 146#146: server name "http://localhost:3000" has suspicious symbols in /data/nginx/proxy_host/2.conf:15
+2023/10/14 07:07:22 [warn] 146#146: server name "http://localhost:3000" has suspicious symbols in /data/nginx/proxy_host/2.conf:15
+2023/10/14 07:07:30 [alert] 196#196: *695 512 worker_connections are not enough while connecting to upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "localhost", referrer: "http://localhost/"

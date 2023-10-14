@@ -1,14 +1,15 @@
-FROM node:15.11.0-alpine
+FROM node:18-alpine
 
-RUN mkdir /backend
+WORKDIR /app
 
-WORKDIR /backend
-
-ENV PATH /backend/node_modules/.bin:$PATH
-
-COPY package.json .
+COPY package*.json package-lock.json ./
 
 RUN npm install --no-cache
-#RUN apk add --no-cache git
+
+COPY . .
+
+RUN npm run build
+
+EXPOSE 3000
 
 CMD ["npm", "start"]

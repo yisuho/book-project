@@ -1,0 +1,39 @@
+version: "3.3"
+
+services:
+  nginx:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx-proxy-manager
+    restart: always
+    ports:
+      - 81:81 #관리포트
+      - 80:80 #http
+      - 443:443 #
+    volumes:
+      - ./nginx-proxy-manager/data:/data
+      - ./nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+    environment:
+      DISABLE_IPV6: "true"
+    depends_on:
+      - server
+
+  server:
+    container_name: server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: "on-failure"
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=development
+
+    stdin_open: true
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+    tty: true
