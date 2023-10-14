@@ -5,3 +5,10 @@
 2023/10/14 07:05:03 [warn] 146#146: server name "http://localhost:3000" has suspicious symbols in /data/nginx/proxy_host/2.conf:15
 2023/10/14 07:07:22 [warn] 146#146: server name "http://localhost:3000" has suspicious symbols in /data/nginx/proxy_host/2.conf:15
 2023/10/14 07:07:30 [alert] 196#196: *695 512 worker_connections are not enough while connecting to upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "localhost", referrer: "http://localhost/"
+2023/10/14 07:26:10 [warn] 147#147: server name "http://localhost:3000" has suspicious symbols in /data/nginx/proxy_host/2.conf:15
+2023/10/14 07:27:05 [warn] 194#194: 512 worker_connections are not enough, reusing connections
+2023/10/14 07:27:05 [alert] 194#194: *511 512 worker_connections are not enough while connecting to upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "ec2-35-78-241-42.ap-northeast-1.compute.amazonaws.com", referrer: "http://ec2-35-78-241-42.ap-northeast-1.compute.amazonaws.com/"
+2023/10/14 07:29:33 [warn] 147#147: server name "http://ec2-35-78-241-42.ap-northeast-1.compute.amazonaws.com:3000" has suspicious symbols in /data/nginx/proxy_host/2.conf:15
+2023/10/14 07:31:21 [warn] 147#147: server name "http://ec2-35-78-241-42.ap-northeast-1.compute.amazonaws.com:80" has suspicious symbols in /data/nginx/proxy_host/2.conf:15
+2023/10/14 07:48:39 [alert] 225#225: *1197 512 worker_connections are not enough while connecting to upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "35.78.241.42"
+2023/10/14 07:49:27 [error] 225#225: *1201 "/var/www/html/geoserver/web/index.html" is not found (2: No such file or directory), client: 65.49.1.100, server: localhost-nginx-proxy-manager, request: "GET /geoserver/web/ HTTP/1.1", host: "35.78.241.42"
